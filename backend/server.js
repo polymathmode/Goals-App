@@ -1,4 +1,7 @@
 const express = require( "express");
+const connectDB=require("./config/db")
+
+
 const {errorHandler}=require("./middleware/errorMiddleware")
 const dotenv = require("dotenv")  ;
 
@@ -14,6 +17,8 @@ app.use(express.urlencoded({extended:false}))
 app.use("/api/goals",Routers)
 
 app.use(errorHandler)
+
+connectDB()
 
 
 app.listen(port,()=>{
