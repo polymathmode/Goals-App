@@ -1,5 +1,6 @@
 const express = require( "express");
 const connectDB=require("./config/db")
+const colors=require("colors")
 
 
 const {errorHandler}=require("./middleware/errorMiddleware")
