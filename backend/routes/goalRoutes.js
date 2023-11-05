@@ -1,7 +1,8 @@
-const express = require("express") ;
+const express = require("express");
+
 const {getGoals, setGoals, addGoals, deleteGoals}= require("../controlllers/goalController")
 
- const router=express.Router()
+ const router = express.Router()
 
 
 
