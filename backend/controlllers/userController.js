@@ -55,15 +55,14 @@ const createUser=asyncHandler(async(req,res)=>{
     })
 
     const getUser= asyncHandler(async(req,res)=>{
-      const user=await User.findOne({id:req._id});
-      if(!user){
-        throw new Error(`User not found`);
+      // const user=await User.findOne({id:req._id});
+      // if(!user){
+      //   throw new Error(`User not found`);
 
-      }
-      res.status(200).json({
-        message:`User found`,
-        user
-      })
+      // }
+      res.status(200).json(
+       req.user
+      )
     })
 
 
